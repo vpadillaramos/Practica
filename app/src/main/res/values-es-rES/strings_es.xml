@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Practica</string>
+    <string name="groups">Grupos</string>
+    <string name="see_concerts">Ver conciertos</string>
+    <string name="add_concert">Añadir concierto</string>
+    <string name="date">Fecha</string>
+    <string name="hour">Hora</string>
+    <string name="place">Lugar</string>
+    <string name="assisted">Asistido</string>
+    <string name="canceled">Cancelado</string>
+    <string name="save">Guardar</string>
+    <string name="price">Precio</string>
+    <string name="modify">Modificar</string>
+    <string name="delete">Eliminar</string>
+    <string name="added_concert">Concierto añadido</string>
+    <string name="modified_concert">Concierto modificado</string>
+    <string name="about_title">ConciertosDB</string>
+    <string name="about_description">Esta aplicación te permite almacenar conciertos, personalizarlos y visualizarlos</string>
+    <string name="about_it">Acerca de</string>
+    <string name="view_concert_status">Ver estado de conciertos</string>
+    <string name="bands_missing">Grupos es un campo obligatorio</string>
+    <string name="date_missing">Sin fecha</string>
+    <string name="time_missing">Sin hora</string>
+    <string name="place_missing">Lugar no especificado</string>
+    <string name="price_missing">0.0</string>
+    <string name="poster_missing">El cartel es obligatorio</string>
+    <string name="pending_concerts">Conciertos pendientes</string>
+    <string name="status_counters">Contadores de conciertos</string>
+    <string name="counter_pending">Pendientes</string>
+    <string name="count_attended">Asistidos</string>
+    <string name="count_canceled">Cancelados</string>
+    <string name="wrong_decimal_format">El decimal debe ser 0.0 o 0,0</string>
+</resources>

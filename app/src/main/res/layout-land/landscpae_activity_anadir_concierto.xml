@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/etGrupos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/groups"
+            android:inputType="textPersonName" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="@string/date" />
+
+            <TextView
+                android:id="@+id/tvFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:text="@string/hour" />
+
+            <TextView
+                android:id="@+id/tvHora"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etLugar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/place"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/etPrecio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/price"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/chbAsistido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingRight="50dp"
+                    android:text="@string/assisted" />
+
+                <CheckBox
+                    android:id="@+id/chbCancelado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="50dp"
+                    android:text="@string/canceled" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivCartel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="-40dp"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/save" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

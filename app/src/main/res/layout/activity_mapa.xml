@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    tools:context="com.vpr.practica.activities.MapaActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapaView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        mapbox:center_latitude="40.4379543"
+        mapbox:center_longitude="-3.6795367"
+        mapbox:zoom="12"
+        mapbox:style_url="@string/style_mapbox_streets">
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@mipmap/ic_launcher_round"
+        mapbox:backgroundTint="@color/mapbox_blue"/>
+        <!--tools:ignore="VectorDrawableCompat"/>-->
+</RelativeLayout>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/itemConciertosPendientes"
+        android:title="@string/pending_concerts" />
+    <item
+        android:id="@+id/itemContadores"
+        android:title="@string/status_counters" />
+</menu>

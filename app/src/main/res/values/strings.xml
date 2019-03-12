@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Practica</string>
+    <string name="groups">Bands</string>
+    <string name="see_concerts">See concerts</string>
+    <string name="add_concert">Add concert</string>
+    <string name="date">Date</string>
+    <string name="hour">Time</string>
+    <string name="place">Place</string>
+    <string name="assisted">Attended</string>
+    <string name="canceled">Canceled</string>
+    <string name="save">Save</string>
+    <string name="price">Price</string>
+    <string name="modify">Modify</string>
+    <string name="delete">Delete</string>
+    <string name="added_concert">Concert added</string>
+    <string name="modified_concert">Concert modified</string>
+    <string name="about_title">BandsDB</string>
+    <string name="about_description">With this app you can store concerts, personalize and visualize them</string>
+    <string name="about_it">About it</string>
+    <string name="view_concert_status">See concerts status</string>
+    <string name="bands_missing">Bands are required</string>
+    <string name="date_missing">No date</string>
+    <string name="time_missing">No time</string>
+    <string name="place_missing">No place</string>
+    <string name="price_missing">0.0</string>
+    <string name="poster_missing">Poster is required</string>
+    <string name="pending_concerts">Pending concerts</string>
+    <string name="status_counters">Concert counters</string>
+    <string name="counter_pending">Pending</string>
+    <string name="count_attended">Attended</string>
+    <string name="count_canceled">Canceled</string>
+    <string name="wrong_decimal_format">Decimal must be 0.0 or 0,0</string>
+    <string name="location">Location</string>
+</resources>
