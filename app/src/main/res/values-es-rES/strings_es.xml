@@ -31,4 +31,6 @@
     <string name="count_attended">Asistidos</string>
     <string name="count_canceled">Cancelados</string>
     <string name="wrong_decimal_format">El decimal debe ser 0.0 o 0,0</string>
+    <string name="location">Lugar</string>
+    <string name="date_required">Fecha obligatoria</string>
 </resources>

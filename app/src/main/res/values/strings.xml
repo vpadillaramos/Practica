@@ -31,4 +31,5 @@
     <string name="count_canceled">Canceled</string>
     <string name="wrong_decimal_format">Decimal must be 0.0 or 0,0</string>
     <string name="location">Location</string>
+    <string name="date_required">Date is required</string>
 </resources>

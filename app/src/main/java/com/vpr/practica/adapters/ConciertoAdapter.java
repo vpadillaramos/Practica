@@ -63,7 +63,7 @@ public class ConciertoAdapter extends BaseAdapter {
         else
             holder.tvTiempo.setText(Util.formateaFecha(concierto.getFecha()) + " - " +
             concierto.getHora());
-        holder.tvLugar.setText(concierto.getLugar() + " - " + concierto.getPrecio() + "€");
+        holder.tvLugar.setText(concierto.getPrecio() + "€");
 
         return convertView;
     }

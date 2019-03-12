@@ -64,9 +64,10 @@ public class Database extends SQLiteOpenHelper {
         else
             values.put(FECHA, Util.formateaFecha(concierto.getFecha()));
         values.put(HORA, concierto.getHora());
-        values.put(LUGAR, concierto.getLugar());
+        //values.put(LUGAR, concierto.getLugar());
+        //TODO
         values.put(PRECIO, concierto.getPrecio());
-        values.put(CARTEL, Util.getBytes(concierto.getCartel()));
+        //values.put(CARTEL, Util.getBytes(concierto.getCartel()));
         values.put(ASISTIDO, Util.setBooleanDb(concierto.isAsistido()));
         values.put(CANCELADO, Util.setBooleanDb(concierto.isCancelado()));
 
@@ -91,9 +92,10 @@ public class Database extends SQLiteOpenHelper {
         else
             values.put(FECHA, Util.formateaFecha(concierto.getFecha()));
         values.put(HORA, concierto.getHora());
-        values.put(LUGAR, concierto.getLugar());
+        //values.put(LUGAR, concierto.getLugar());
+        //TODO
         values.put(PRECIO, concierto.getPrecio());
-        values.put(CARTEL, Util.getBytes(concierto.getCartel()));
+        //values.put(CARTEL, Util.getBytes(concierto.getCartel()));
         values.put(ASISTIDO, Util.setBooleanDb(concierto.isAsistido()));
         values.put(CANCELADO, Util.setBooleanDb(concierto.isCancelado()));
 
@@ -127,9 +129,10 @@ public class Database extends SQLiteOpenHelper {
                 e.printStackTrace();
             }
             concierto.setHora(cursor.getString(3));
-            concierto.setLugar(cursor.getString(4));
+            //concierto.setLugar(cursor.getString(4));
+            //TODO
             concierto.setPrecio(cursor.getFloat(5));
-            concierto.setCartel(Util.getBitmap(cursor.getBlob(6)));
+            //concierto.setCartel(Util.getBitmap(cursor.getBlob(6)));
             concierto.setAsistido(Util.getBoolean(cursor.getInt(7)));
             concierto.setCancelado(Util.getBoolean(cursor.getInt(8)));
 
@@ -166,9 +169,10 @@ public class Database extends SQLiteOpenHelper {
                 e.printStackTrace();
             }
             concierto.setHora(cursor.getString(3));
-            concierto.setLugar(cursor.getString(4));
+            //concierto.setLugar(cursor.getString(4));
+            //TODO
             concierto.setPrecio(cursor.getFloat(5));
-            concierto.setCartel(Util.getBitmap(cursor.getBlob(6)));
+            //concierto.setCartel(Util.getBitmap(cursor.getBlob(6)));
             concierto.setAsistido(Util.getBoolean(cursor.getInt(7)));
             concierto.setCancelado(Util.getBoolean(cursor.getInt(8)));
 

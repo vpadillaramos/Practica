@@ -174,15 +174,19 @@ public class AnadirConcierto extends Activity implements View.OnClickListener,
                 }
 
                 //si voy a modificar un concierto esto no hace falta ya que ya tiene una imagen
-                if(!accion.equals("modificar")){
+                /*if(!accion.equals("modificar")){
                     if(!flagImagenSeleccionada){
                         Toast.makeText(this, R.string.poster_missing, Toast.LENGTH_LONG).show();
                         return;
                     }
-                }
+                }*/
 
-                if(tvFecha.getText().toString().equals(""))
-                    tvFecha.setText(R.string.date_missing);
+                if(tvFecha.getText().toString().equals("")) {
+                    if(!accion.equals("modificar")){
+                        Toast.makeText(this, R.string.date_required, Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                }
 
                 if(tvHora.getText().toString().equals(""))
                     tvHora.setText(R.string.time_missing);
@@ -241,12 +245,6 @@ public class AnadirConcierto extends Activity implements View.OnClickListener,
                 }*/
 
                 switch (accion){
-                    case "modificar":
-                        // TODO
-                        concierto.setId(idConcierto);
-                        Toast.makeText(this, R.string.modified_concert, Toast.LENGTH_LONG).show();
-                        break;
-
                     case "nuevo":
                         limpiar();
                         GuardaConcierto guardaConcierto = new GuardaConcierto();
@@ -357,7 +355,7 @@ public class AnadirConcierto extends Activity implements View.OnClickListener,
             chbAsistido.setClickable(true);
     }
 
-    private class GuardaConcierto extends AsyncTask<String, Integer, Void>{
+    private class GuardaConcierto extends AsyncTask<String, Void, Void>{
 
         @Override
         protected Void doInBackground(String... strings) {
@@ -371,11 +369,6 @@ public class AnadirConcierto extends Activity implements View.OnClickListener,
             "&cancelado=" + strings[7], Void.class);
 
             return null;
-        }
-
-        @Override
-        protected void onProgressUpdate(Integer... values) {
-            super.onProgressUpdate(values);
         }
     }
 }

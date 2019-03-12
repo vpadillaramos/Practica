@@ -20,8 +20,9 @@ public class Util {
      * @return fecha String
      */
     public static String formateaFecha(Date fecha){
+        if(fecha == null)
+            return null;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
         return sdf.format(fecha);
     }
 
@@ -32,8 +33,9 @@ public class Util {
      * @throws ParseException
      */
     public static Date parsearFecha(String fecha) throws ParseException {
+        if(fecha == null || fecha.isEmpty())
+            return null;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-
         return sdf.parse(fecha);
     }
 
