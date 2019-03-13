@@ -5,7 +5,7 @@ public class Constantes {
     //////////////////////////////
     ///////////JSON///////////////
     //////////////////////////////
-    public final static String SERVER_URL = "http://10.0.2.2:8083"; // 10.0.2.2 para la MV
+    public final static String SERVER_URL = "http://10.0.2.2:8082"; // 10.0.2.2 para la MV
 
 
     //////////////////////////////

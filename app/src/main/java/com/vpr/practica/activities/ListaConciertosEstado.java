@@ -4,20 +4,16 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.vpr.practica.R;
 import com.vpr.practica.adapters.ConciertoEstadoAdapter;
 import com.vpr.practica.base.Concierto;
-import com.vpr.practica.db.Database;
 
 import java.util.List;
 
@@ -38,8 +34,8 @@ public class ListaConciertosEstado extends Activity {
             setContentView(R.layout.landscape_activity_lista_conciertos_estado);
 
         //Componentes
-        Database db = new Database(this);
-        listaConciertosEstado = db.getConciertosEstado();
+        /*Database db = new Database(this);
+        listaConciertosEstado = db.getConciertosEstado();*/
 
         ListView lvConciertos = findViewById(R.id.listaConciertosEstado);
         adapter = new ConciertoEstadoAdapter(this, R.layout.item_concierto_estado, listaConciertosEstado);
@@ -50,7 +46,7 @@ public class ListaConciertosEstado extends Activity {
     protected void onResume() {
         super.onResume();
 
-        refrescar();
+        //refrescar();
     }
 
     //METODOS
@@ -58,13 +54,13 @@ public class ListaConciertosEstado extends Activity {
     /**
      * Refresca la lista de asistidos o cancelados a partir de la base de datos
      */
-    public void refrescar(){
+    /*public void refrescar(){
         listaConciertosEstado.clear();
 
         Database db = new Database(this);
         listaConciertosEstado.addAll(db.getConciertosEstado());
         adapter.notifyDataSetChanged();
-    }
+    }*/
 
     /**
      * Muestra un dialogo con los conciertos pendientes, asistidos y cancelados
@@ -83,11 +79,11 @@ public class ListaConciertosEstado extends Activity {
         TextView tvCancelados = layout.findViewById(R.id.tvCancelados);
 
         //Relleno los campos
-        Database db = new Database(this);
+        /*Database db = new Database(this);
 
         tvPendientes.setText(String.valueOf(db.getConciertos().size()));
         tvAsistidos.setText(String.valueOf(db.getConciertosAsistidos()));
-        tvCancelados.setText(String.valueOf(db.getConciertosCancelados()));
+        tvCancelados.setText(String.valueOf(db.getConciertosCancelados()));*/
 
         builder.create();
         builder.show();

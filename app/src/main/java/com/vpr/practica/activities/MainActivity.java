@@ -1,19 +1,25 @@
 package com.vpr.practica.activities;
 
-import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.vpr.practica.R;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    // Componentes
+    private Button btAnadir;
+    private Button btVer;
+    private Button btMapaConciertos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,14 +32,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
             setContentView(R.layout.landscape_activity_main);
 
         //Componentes
-        Button btAnadir = findViewById(R.id.btAnadir);
-        Button btVer = findViewById(R.id.btVer);
-        Button btConciertosEstado = findViewById(R.id.btConciertosEstado);
+        btAnadir = (Button) findViewById(R.id.btAnadir);
+        btVer = (Button) findViewById(R.id.btVer);
+        btMapaConciertos = (Button) findViewById(R.id.btMapaConciertos);
 
         //Listeners
         btAnadir.setOnClickListener(this);
         btVer.setOnClickListener(this);
-        btConciertosEstado.setOnClickListener(this);
+        btMapaConciertos.setOnClickListener(this);
+
+
+        gestionarPreferencias();
 
     }
 
@@ -49,8 +58,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intListaConciertos = new Intent(this, ListaConciertos.class);
                 startActivity(intListaConciertos);
                 break;
-            case R.id.btConciertosEstado:
-                Intent intent = new Intent(this, ListaConciertosEstado.class);
+            case R.id.btMapaConciertos:
+                Intent intent = new Intent(this, MapaActivity.class);
                 startActivity(intent);
                 break;
             default:
@@ -59,34 +68,62 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
     }
 
-    /**
-     * Metodo que crea y muestra un AlertDialog personalizado con informacion sobre la aplicacion
-     */
-    public void showAcercaDe(){
-        View view = getLayoutInflater().inflate(R.layout.dialogo_acerca_de, null, false);
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        gestionarPreferencias();
+    }
 
-        TextView tvDescripcion = view.findViewById(R.id.tvDescripcion);
-        tvDescripcion.setText(R.string.about_description);
+    private void gestionarPreferencias() {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle(R.string.about_title);
-        builder.setView(view);
-        builder.create();
-        builder.show();
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean fuenteGrande = preferences.getBoolean("fuenteGrande", false);
+        boolean modoNoche = preferences.getBoolean("modoNoche", false);
+        String tituloApp = preferences.getString("tituloApp", null);
+
+        // FUENTE GRANDE
+        if(fuenteGrande){
+            btMapaConciertos.setTextSize(25);
+            btVer.setTextSize(25);
+            btAnadir.setTextSize(25);
+        }
+        else{
+            btMapaConciertos.setTextSize(16);
+            btVer.setTextSize(16);
+            btAnadir.setTextSize(16);
+        }
+
+        // TITULO APP
+        if(tituloApp.isEmpty())
+            return;
+        else
+            this.setTitle(tituloApp);
+
+        // MODO NOCHE
+        View view = this.getWindow().getDecorView();
+        if(modoNoche)
+            view.setBackgroundColor(Color.BLACK);
+        else
+            view.setBackgroundColor(Color.WHITE);
     }
 
     //Creo el menu superior
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_about, menu);
+        getMenuInflater().inflate(R.menu.menu_bar, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.itemAcercaDe:
-                showAcercaDe();
+            case R.id.itemPreferencias:
+                Intent intentPreferencias = new Intent(this, Preferencias.class);
+                startActivity(intentPreferencias);
+                return true;
+            case R.id.itemAbout:
+                Intent intent = new Intent(this, AcercaDe.class);
+                startActivity(intent);
                 return true;
 
             default:

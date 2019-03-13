@@ -16,7 +16,12 @@
     <string name="added_concert">Concierto añadido</string>
     <string name="modified_concert">Concierto modificado</string>
     <string name="about_title">ConciertosDB</string>
-    <string name="about_description">Esta aplicación te permite almacenar conciertos, personalizarlos y visualizarlos</string>
+    <string name="about_description">
+        Esta aplicación te permite almacenar conciertos, personalizarlos y visualizarlos,
+        pudiendo especificar los grupos, fecha y hora, el lugar mediante un mapa, el precio,
+        si se ha asistido o ha sido cancelado.
+        Cuenta con un mapa para visualizar todos los conciertos en la lista
+    </string>
     <string name="about_it">Acerca de</string>
     <string name="view_concert_status">Ver estado de conciertos</string>
     <string name="bands_missing">Grupos es un campo obligatorio</string>
@@ -33,4 +38,7 @@
     <string name="wrong_decimal_format">El decimal debe ser 0.0 o 0,0</string>
     <string name="location">Lugar</string>
     <string name="date_required">Fecha obligatoria</string>
+    <string name="place_required">Lugar obligatorio</string>
+    <string name="see_concerts_map">Ver mapa de conciertos</string>
+    <string name="preferences">Ajustes</string>
 </resources>

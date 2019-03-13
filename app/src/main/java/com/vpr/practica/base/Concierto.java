@@ -11,8 +11,8 @@ public class Concierto implements Serializable {
     private String grupos;
     private Date fecha;
     private String hora;
-    private float latitud;
-    private float longitud;
+    private double latitud;
+    private double longitud;
     private float precio;
     //private transient Bitmap cartel;
     private boolean asistido;
@@ -52,19 +52,19 @@ public class Concierto implements Serializable {
         this.hora = hora;
     }
 
-    public float getLatitud() {
+    public double getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(float latitud) {
+    public void setLatitud(double latitud) {
         this.latitud = latitud;
     }
 
-    public float getLongitud() {
+    public double getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(float longitud) {
+    public void setLongitud(double longitud) {
         this.longitud = longitud;
     }
 

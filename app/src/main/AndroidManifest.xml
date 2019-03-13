@@ -26,8 +26,12 @@
         <activity android:name=".activities.AnadirConcierto" />
         <activity android:name=".activities.ListaConciertos" />
         <activity android:name=".activities.ListaConciertosEstado" />
-        <activity android:name=".activities.MapaActivity"></activity>
+        <activity android:name=".activities.MapaActivity" />
+        <activity android:name=".activities.Preferencias"/>
+
         <service android:name="com.mapbox.mapboxsdk.telemetry.TelemetryService" />
+
+        <activity android:name=".activities.AcercaDe" />
     </application>
 
 </manifest>

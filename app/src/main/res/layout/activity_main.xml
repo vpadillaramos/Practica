@@ -23,10 +23,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btConciertosEstado"
+            android:id="@+id/btMapaConciertos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/view_concert_status" />
+            android:text="@string/see_concerts_map" />
 
         <Button
             android:id="@+id/btVer"

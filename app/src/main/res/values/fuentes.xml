@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="fuentes">
+        <item>24</item>
+        <item>18</item>
+        <item>16</item>
+    </string-array>
+    <string-array name="fuentes2">
+        <item>24</item>
+        <item>18</item>
+        <item>16</item>
+    </string-array>
+</resources>

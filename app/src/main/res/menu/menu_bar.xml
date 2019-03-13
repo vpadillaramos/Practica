@@ -3,10 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/itemAnadir"
-        android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/add_concert" />
+        android:id="@+id/itemPreferencias"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/preferences"/>
     <item
-        android:id="@+id/itemVerEstadoConciertos"
-        android:title="@string/view_concert_status" />
+        android:id="@+id/itemAbout"
+        app:showAsAction="always"
+        android:icon="@android:drawable/ic_menu_info_details"
+        android:title="@string/about_it" />
 </menu>
